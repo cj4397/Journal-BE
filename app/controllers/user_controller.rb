@@ -1,8 +1,12 @@
 class UserController < ApplicationController
 
     def show
-        @user = User.find_by_email(params[:email])
-        render json: {user:@user}, status: 200
+        @user = User.all
+        if @user
+            render json: {user:@user}, status: 200
+        else
+            render json: {user:error}
+        end
     end
 
     def create
