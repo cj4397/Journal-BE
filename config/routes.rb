@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   post '/user/all' => 'user#show'
-  post '/user' => 'uses#create'
+  post '/user' => 'user#create'
   put '/user/profile' => 'user#update'
   delete '/user/delete' => 'user#destroy'
   post '/user/signin' => 'user#signin'
